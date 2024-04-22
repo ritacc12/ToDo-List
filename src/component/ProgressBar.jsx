@@ -1,20 +1,24 @@
 import React from "react";
 import "../styles/Progressbar.css";
 
-const ProgressBar = ({ toTos }) => {
-  const totalToDos = toTos.length;
-  const completedToDos = toTos.filter((todo) => todo.completed.length);
+const ProgressBar = ({ toDos }) => {
+  const totalTodos = toDos.length;
+  const completedTodos = toDos.filter((todo) => todo?.completed).length;
   const progress =
-    totalToDos === 0 ? 0 : Math.round((completedToDos / totalToDos) * 100);
+    totalTodos === 0 ? 0 : Math.round((completedTodos / totalTodos) * 100);
 
   return (
-    <div className="progress-bar">
-      <div
-        className="progress-bar-fill"
-        style={{ width: `${progress}%` }}
-      ></div>
-      <div className="progress-bar-label">{progress}%</div>
-    </div>
+    <>
+      <div className="progressBar">
+        <div className="progress-bar-label">{progress}%</div>
+        <div className="progress-bar">
+          <div
+            className="progress-bar-fill"
+            style={{ width: `${progress}%` }}
+          ></div>
+        </div>
+      </div>
+    </>
   );
 };
 
