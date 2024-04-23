@@ -1,0 +1,58 @@
+.todo-list {
+  max-height: 300px; /* 設置最大高度,超出部分會出現滾動條 */
+  padding-right: 20px; /* 防止滾動條遮擋內容 */
+  border-bottom: 2px solid #6c8cd7;
+}
+
+/* 自定義滾動條樣式 */
+.todo-list::-webkit-scrollbar {
+  width: 8px;/* 滾動條寬度 */
+}
+
+.todo-list::-webkit-scrollbar-track {
+  background-color: white; /* 滾動條軌道顏色 */
+  border-radius: 4px;
+}
+
+.todo-list::-webkit-scrollbar-thumb {
+  background-color: #B3B6F2; /* 滾動條拇指顏色 */
+  border-radius: 4px;
+}
+
+.todo-list::-webkit-scrollbar-thumb:hover {
+  background-color: #B3B6F2;  /* 滾動條拇指懸停顏色 */
+}
+
+/* TodoItem 樣式 */
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+.todo-item-content {
+  display: flex;
+  align-items: center;
+  border-left: 5px solid #6c8cd7;
+  background-color: white;
+  border-radius: 5px;
+  width: 100%;
+  height: 60px;
+}
+
+.todo-item-text {
+  margin-left: 10px;
+  flex-grow: 1;
+}
+
+.todo-item-text.completed {
+  text-decoration: line-through;
+  color: #6c8cd7;
+}
+
+.todo-item-delete {
+  cursor: pointer;
+  font-size: 16px;
+}
