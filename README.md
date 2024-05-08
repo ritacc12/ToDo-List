@@ -9,6 +9,7 @@ This is a React x Tailwind ToDo List project
 2. Click the checkbox to complete the todo Item. The progress Bar will display the completion rate
 3. Delete the specified todo item
 4. Use the toggle button to sort to-do items. When clicked, completed items will be arranged at the bottom of the list and unfinished items will be arranged at the top; if you close it again
+5. Connect Postman as a test backend server to record todo items
 
 ## Installation
 
